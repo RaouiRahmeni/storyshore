@@ -18,27 +18,41 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  **story shore
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  it's for everyone how wants to share a story
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  this application gives you the power to write your story and post it publicly also you can dive in
+  other stories or other divers work and have fun in this shore of ours because it's for evrybody. 
 
 ## Problem ##
   > Describe the problem your product solves.
+  sharing stories
+  writes what's on your mind and make people hear you.
+
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  you register and login to the app
+  you can write a post 
+  you can edit or delete a post 
+  you can read other stories 
+  you can sort stories by author or catigories
+  you can edit your profile
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
-
+  > don't be afraid to fail, be afraid not to try.
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  if you can look up you can get up.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
-
+it was the exhautic trip i was waiting fro.
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Wrap it up and give pointers where the reader should go next. 
+  so how about to learn more.
