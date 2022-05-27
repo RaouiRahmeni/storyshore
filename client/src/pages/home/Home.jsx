@@ -1,36 +1,38 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
-import React, { useEffect, useState } from 'react'
-import Header from "../../components/header/Header"
-import Posts from "../../components/posts/Posts"
-import Sidebar from "../../components/sidebar/Sidebar"
-import './home.css'
-import axios from 'axios';
-import { useLocation } from 'react-router-dom'
+import React, { useEffect, useState } from "react";
+import Posts from "../../components/posts/Posts";
+import Sidebar from "../../components/sidebar/Sidebar";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+import "./home.css";
 
 export default function Home() {
+  const [posts, setPosts] = useState([]);
+  const { search } = useLocation();
+  const fetchPosts = async () => {
+    const res = await axios.get("/posts" + search);
+    setPosts(res.data);
+  };
 
-    const [posts, setPosts] = useState([]);
-    const {search} = useLocation();
+  useEffect(() => {
+    fetchPosts();
+  }, [search]);
 
-
-
-    useEffect(()=>{
-        const fetchPosts = async ()=>{
-           const res = await axios.get("/posts"+search)
-           setPosts(res.data)
-        }
-        fetchPosts()
-    },[search])
-
-    return (
-        <>
-        <Header/>
-        <div className="home">
-            
-            <Posts posts={posts}/>
-            <Sidebar/>
+  return (
+    <>
+      <div className="header">
+        <div className="headerTitles">
+          <span className="headerTitleLg"> Story Shore </span>
         </div>
-        </>
-    )
+        <img
+          className="headerImg"
+          src="https://wallpaperaccess.com/full/356357.jpg"
+          alt="backImg"
+        />
+      </div>{" "}
+      <div className="home">
+        <Posts posts={posts} />
+        <Sidebar />
+      </div>
+    </>
+  );
 }

@@ -1,6 +1,3 @@
-/* eslint-disable no-empty */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 const router= require("express").Router();
 const User = require("../models/User");
 const Post = require("../models/Post");

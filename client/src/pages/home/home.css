@@ -1,3 +1,24 @@
-.home{
-    display: flex;
+.home {
+  display: flex;
+  margin: 0;
+}
+.header {
+  margin-top: 60px;
+}
+.headerTitles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "lora", "serif";
+  color: rgb(47, 46, 62);
+}
+.headerTitleLg {
+  position: absolute;
+  top: 23%;
+  font-size: 100px;
+}
+.headerImg {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }

@@ -1,6 +1,3 @@
-/* eslint-disable no-empty */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 const router= require("express").Router();
 const Category = require("../models/Category");
 

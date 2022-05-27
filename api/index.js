@@ -1,8 +1,8 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-undef */
 const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
+dotenv.config();
+const PORT = 8080; 
 const mongoose= require('mongoose');
 const authRoute = require('./routes/auth');
 const userRoute = require('./routes/users');
@@ -16,14 +16,12 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({extended : true}))
 
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-     useUnifiedTopology: true,
-     userCreateIndex: true,
-    })
-    .then(console.log("connected to MongoDB"))
-    .catch((err)=>console.log(err));
-
+    mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+    const db = mongoose.connection;
+    db.on("error", console.error.bind(console, "connection error:"));
+    db.once("open", function () {
+      console.log("db connected");
+    });
 
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
@@ -52,6 +50,6 @@ app.get('*', (req, res) => {
   });
   app.use( express.static(path.join(__dirname, "../client/build")))
 
-app.listen("5000", ()=>{
+app.listen(PORT, ()=>{
     console.log("i got your back")
 });
