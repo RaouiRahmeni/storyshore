@@ -6,8 +6,10 @@ import axios from "axios";
 import "./home.css";
 
 export default function Home() {
+  
   const [posts, setPosts] = useState([]);
   const { search } = useLocation();
+
   const fetchPosts = async () => {
     const res = await axios.get("/posts" + search);
     setPosts(res.data);
