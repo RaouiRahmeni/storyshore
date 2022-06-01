@@ -1,11 +1,10 @@
-import { Link } from "react-router-dom";
 import { useContext, useRef } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 // import "./login.css";
 
-export default function Login() {
+export default function Signin() {
   const navigate = useNavigate();
 
   const userRef = useRef();
@@ -73,7 +72,7 @@ export default function Login() {
               </button>
               <p className={"mt-3 ot-text-dark"}>
                 Don't have an account already?{" "}
-                <a className={"ot-link-primary"} href="/register">
+                <a className={"ot-link-primary"} href="/signup">
                   Sign Up
                 </a>
               </p>

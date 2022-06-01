@@ -3,8 +3,8 @@ import TopBar from "./components/topbar/topbar";
 import Single from "./pages/single/Single";
 import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
-import Login from "./pages/login/Login";
-import Register from "./pages/register/Register";
+import Signin from "./pages/signin/Signin";
+import Signup from "./pages/signup/Signup";
 import About from "./pages/about/About";
 
 import { useContext } from "react";
@@ -23,8 +23,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           {/* <Route exact path="/about" element={<About />} /> */}
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/signin" element={<Signin />} />
           <Route path="/write" element={<Write />} />
           <Route path="/settings" element={<Settings />} />
           <Route path="/post/:postId" element={<Single />} />
