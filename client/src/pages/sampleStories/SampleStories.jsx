@@ -6,7 +6,7 @@ export default function SampleStories() {
   return (
     <div>
       {" "}
-      <section class="page-section bg-secondary p-2 bg-opacity-25" id="Stories">
+      <section class="page-section bg-light p-2" id="Stories">
         <div class="container">
           <div class="text-center">
             <h2 class="section-heading text-uppercase">Amazing Stories</h2>

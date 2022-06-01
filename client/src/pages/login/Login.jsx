@@ -10,6 +10,7 @@ export default function Login() {
 
   const userRef = useRef();
   const passwordRef = useRef();
+
   const { dispatch, isFetching } = useContext(Context);
 
   const handleSubmit = async (e) => {
@@ -27,31 +28,59 @@ export default function Login() {
     }
   };
   return (
-    <div className="login">
-      <span className="loginTitle">Login</span>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <label>Username</label>
-        <input
-          type="text"
-          className="loginInput"
-          placeholder="Enter your username..."
-          ref={userRef}
-        />
-        <label>Password</label>
-        <input
-          type="password"
-          placeholder="Enter your password..."
-          ref={passwordRef}
-        />
-        <button className="loginButton" type="submit" disabled={isFetching}>
-          Login
-        </button>
-      </form>
-      <button className="loginRegisterButton">
-        <Link className="link" to={"/register"}>
-          Register
-        </Link>
-      </button>
+    <div className="h-100 align-items-center justify-content-center mt-5 bg-light p-2">
+      <div className={"container"}>
+        <div className={"row mt-3"}>
+          <div className={"col"}></div>
+          <div className={"col-7"}>
+            <h2>Sign In</h2>
+          </div>
+          <div className={"col"}>
+            <a className={"ot-link-primary"} href="/">
+              ← Go Back to main site
+            </a>
+          </div>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <div className={"row w-35 mx-auto"}>
+            <div className={"col-12 text-center mb-3"}>
+              <p className={"float-start"} style={{ color: "black" }}>
+                Enter your full name
+              </p>
+              <input
+                type="password"
+                className="ot-form-control w-100"
+                id="exampleInputPassword1"
+                placeholder="Your Name"
+                ref={userRef}
+              />
+              <p className={"float-start"} style={{ color: "black" }}>
+                Password
+              </p>
+              <input
+                type="password"
+                className="ot-form-control w-100"
+                id="exampleInputPassword1"
+                placeholder="Password"
+                ref={passwordRef}
+              />
+              <button
+                className={"btn w-100 btn-primary mt-4"}
+                type="submit"
+                disabled={isFetching}
+              >
+                Sign In
+              </button>
+              <p className={"mt-3 ot-text-dark"}>
+                Don't have an account already?{" "}
+                <a className={"ot-link-primary"} href="/register">
+                  Sign Up
+                </a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

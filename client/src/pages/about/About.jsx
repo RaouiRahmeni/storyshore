@@ -6,7 +6,7 @@ import image4 from "../../assets/img/about/4.jpg";
 
 export default function About() {
   return (
-    <section class="page-section bg-warning p-2 bg-opacity-25" id="about">
+    <section class="page-section p-2 bg-opacity-25" id="about">
       <div class="container">
         <div class="text-center">
           <h2 class="section-heading text-uppercase">About</h2>

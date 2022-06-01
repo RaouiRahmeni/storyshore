@@ -57,8 +57,8 @@ export default function TopBar() {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/portfolio">
-                  Portfolio
+                <a class="nav-link" href="/login">
+                  Login
                 </a>
               </li>
             </ul>
