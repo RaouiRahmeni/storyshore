@@ -36,5 +36,5 @@ app.use('/api/auth', authRoute);
 app.use('/api/users', userRoute);
 app.use('/api/posts', postRoute);
 app.use('/api/categories', categoryRoute);
-app.listen(PORT, () => console.log("server is running"))
+app.listen(PORT, () => console.log(`server is running at ${PORT}`))
 

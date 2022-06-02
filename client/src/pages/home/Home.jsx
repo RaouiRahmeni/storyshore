@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import About from "../about/About";
 import SampleStories from "../sampleStories/SampleStories";
+import Contact from "../contact/Contact";
 
 import { useLocation } from "react-router-dom";
 import axios from "axios";
@@ -34,6 +35,7 @@ export default function Home() {
       </header>
       <About />
       <SampleStories />
+      <Contact />
     </>
   );
 }
