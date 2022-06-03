@@ -1,4 +1,3 @@
-// import "./settings.css";
 import { useContext, useState } from "react";
 import { Context } from "../../context/Context";
 import axios from "axios";
@@ -10,7 +9,7 @@ export default function Settings() {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
   const { user, dispatch } = useContext(Context);
-
+  console.log(user);
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch({ type: "UPDATE_START" });
@@ -43,13 +42,17 @@ export default function Settings() {
     <div className="row rounded  m-5">
       <div className="col-4 rounded bg-info mt-5 p-5">
         <img
-          class="img-thumbnail"
+          class="img-fluid mx-auto d-block"
+          // width={100}
+          height={100}
           src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Profile img fail to load"
         />
 
         <div className="row">
-          <h5>Ali</h5>
+          <h5>{user.username}</h5>
+          <h5>{user.email}</h5>
+
           <h5>+8451328465</h5>
           <hr />
           <button className="yo btn btn-outline-primary">UPDATE</button>
